@@ -16,13 +16,16 @@ function validate(req, res, next){
         next();
     }
 
-    if(req.method === "DELETE"){
+    else if(req.method === "DELETE"){
         try{
             next()
         }
         catch(err){
             console.log(err)
         }
+    }
+    else{
+        next();
     }
 }
 
